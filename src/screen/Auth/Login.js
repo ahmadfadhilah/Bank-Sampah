@@ -14,9 +14,9 @@ import TextView from '../../components/TextView';
 import {changeToken, setUser} from '../../redux/Action';
 import {login} from '../../services/endpoint/auth';
 import {styles, colors} from '../../styles/styles';
-import Icon from 'react-native-vector-icons/FontAwesome5'
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
-const Login = (props) => {
+const Login = props => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [secure, setSecure] = useState(true);
@@ -53,17 +53,18 @@ const Login = (props) => {
       <StatusBar backgroundColor={colors.lightBg} barStyle="dark-content" />
       <View style={{paddingHorizontal: 16, paddingTop: 12}}>
         <TouchableOpacity onPress={() => props.navigation.goBack()}>
-          <Icon name="chevron-left" size={20} color={colors.primary}/>
+          <Icon name="chevron-left" size={20} color={colors.primary} />
         </TouchableOpacity>
       </View>
       <View style={[styles.flex, styles.padding0]}>
-        <View style={[
-          styles.flex, 
-          styles.row, 
-          styles.center, 
-          styles.marginVs,
-          styles.padding0
-        ]}>
+        <View
+          style={[
+            styles.flex,
+            styles.row,
+            styles.center,
+            styles.marginVs,
+            styles.padding0,
+          ]}>
           <Image
             source={require('../../assets/Icon/logo.png')}
             style={{width: 150, height: 80}}
@@ -108,10 +109,9 @@ const Login = (props) => {
             />
           </View>
           <TouchableOpacity style={[styles.center, styles.padding2]}>
-            <Text 
+            <Text
               onPress={() => props.navigation.navigate('ForgotPassword')}
-              style={[styles.textMedium]}
-            >
+              style={[styles.textMedium]}>
               Lupa Kata Sandi ?
             </Text>
           </TouchableOpacity>

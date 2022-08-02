@@ -15,11 +15,13 @@
 
 import {View, Text} from 'react-native';
 import React from 'react';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const App = () => {
   return (
     <View>
       <Text>oiiii</Text>
+      <Icon name="chevron-left" size={20} />
     </View>
   );
 };
